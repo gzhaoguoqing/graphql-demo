@@ -1,0 +1,14 @@
+directive @auth(role: String) on FIELD_DEFINITION
+
+type Query{
+	users(name: String): [User]
+}
+
+type User {
+	name: String
+	ext(address: String): Ext @auth(role: "admin")
+}
+
+type Ext {
+	address: String
+}

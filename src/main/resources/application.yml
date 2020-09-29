@@ -1,0 +1,10 @@
+server:
+    servlet:
+        context-path: "/graphql-service"
+    port: 8888
+
+graphiql:
+    mapping: /graphiql
+    endpoint:
+      graphql: /graphql-service/graphql
+      subscriptions: /subscriptions
